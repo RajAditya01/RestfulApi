@@ -1,5 +1,6 @@
 const express = require("express");
 require("./db/conn");
+const student= require("./models/student");
 const app = express();
 const port= process.env.PORT || 8000;
 
