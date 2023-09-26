@@ -12,9 +12,9 @@ app.post("/student", (req, res)=>{
     console.log(req.body);
     const user = new student(req.body)
     user.save().then(()=>{
-        res.send(user);
+        res.status(201).send(user);
     }).catch((e)=>{
-        res.send(e);
+        res.status(400).send(e);
     }) 
 
     res.send("hello from the other side")
